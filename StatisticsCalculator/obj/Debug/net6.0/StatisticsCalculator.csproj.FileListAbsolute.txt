@@ -60,34 +60,14 @@ C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\
 C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.pdb
 C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.genruntimeconfig.cache
 C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\ref\StatisticsCalculator.dll
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\appsettings.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatisticsCalculator.staticwebassets.runtime.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatisticsCalculator.exe
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatisticsCalculator.deps.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatisticsCalculator.runtimeconfig.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatisticsCalculator.dll
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatisticsCalculator.pdb
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.AssemblyInfoInputs.cache
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.AssemblyInfo.cs
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.csproj.CoreCompileInputs.cache
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.RazorAssemblyInfo.cache
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.RazorAssemblyInfo.cs
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.sourcelink.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\staticwebassets\msbuild.StatisticsCalculator.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\staticwebassets\msbuild.build.StatisticsCalculator.props
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.StatisticsCalculator.props
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.StatisticsCalculator.props
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\scopedcss\bundle\StatisticsCalculator.styles.css
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\scopedcss\projectbundle\StatisticsCalculator.bundle.scp.css
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.dll
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\refint\StatisticsCalculator.dll
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.pdb
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.genruntimeconfig.cache
-C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\ref\StatisticsCalculator.dll
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\LogicModule\obj\LogicModule.csproj.nuget.dgspec.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\LogicModule\obj\project.assets.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\LogicModule\obj\project.packagespec.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\obj\project.assets.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\obj\project.packagespec.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\obj\StatCalcTest.csproj.nuget.dgspec.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\nunit.framework.dll
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.csproj.CopyComplete
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\LogicModule\bin\Debug\net7.0\LogicModule.deps.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\bin\Debug\net7.0\StatCalcTest.deps.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\bin\Debug\net7.0\StatCalcTest.runtimeconfig.json
