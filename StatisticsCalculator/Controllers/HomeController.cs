@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StatisticsCalculator.Models;
 using System.Diagnostics;
-using StatisticsCalculator;
+using LogicModule;
 
 namespace StatisticsCalculator.Controllers
 {
@@ -32,6 +32,11 @@ namespace StatisticsCalculator.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        // [HttpPost]
+        // public IActionResult Clear(MeanCalculatorModel model)
+        // {
+        //     
+        // }
         // This method will be called when a form is submitted
         [HttpPost]
         public IActionResult Calculate(MeanCalculatorModel model, string operation)
@@ -50,15 +55,20 @@ namespace StatisticsCalculator.Controllers
                 // Perform the selected operation
                 switch (operation)
                 {
+                    case "ssd":
+                        model.Result =
+                            $"Sample Standard Deviation:\n{LogicModule.Statistics.ComputeSampleStandardDeviation(numbers)}";
+                        break;
+                    case "psd":
+                        model.Result =
+                            $"Population Standard Deviation:\n{LogicModule.Statistics.ComputePopulationStandardDeviation(numbers)}";
+                        break;
                     case "mean":
-                        model.Result = $"Mean: {StatisticsController.CalculateMean(numbers)}";
+                        model.Result = $"Mean:\n{LogicModule.Statistics.CalculateMean(numbers)}";
                         break;
-                    case "sum":
-                        model.Result = $"Sum: {CalculateSum(numbers)}";
-                        break;
-                    case "count":
-                        model.Result = $"Count: {CalculateCount(numbers)}";
-                        break;
+                    // case "clear":
+                    //     model.Result = $"Hi";
+                    //     break;
                     default:
                         ModelState.AddModelError("", "Unknown operation.");
                         break;
@@ -82,37 +92,11 @@ namespace StatisticsCalculator.Controllers
                 .Select(n => n.Value)
                 .ToList();
         }
-
-        // Method to calculate the mean
-        // private double CalculateMean(List<double> valuesList)
-        // {
-        //     int sumAccumulator = 0;
-        //     if (valuesList.Count== 0)
-        //     {
-        //         //should throw an error
-        //         throw new ArgumentException("valuesList parameter cannot be null or empty");
-        //         Console.WriteLine("valuesList parameter cannot be null or empty");
-        //     }
-        //
-        //     foreach (int value in valuesList)
-        //     {
-        //         sumAccumulator = sumAccumulator + value;
-        //     }
-        //
-        //     // # Return the average (sum divided by the number of values we accumulated)
-        //     return ((double)sumAccumulator / valuesList.Count);
-        // }
-
-        // Method to calculate the sum
-        private double CalculateSum(List<double> numbers)
-        {
-            return numbers.Sum();
-        }
-
-        // Method to count the numbers
-        private int CalculateCount(List<double> numbers)
-        {
-            return numbers.Count;
-        }
     }
 }
+
+//The right way to do it (from how he explains it) is to basically make the logicModule, integrate it
+// with your web ui and then finally use playwright to help you write the tests
+
+//I set up the web ui so now I am implememnting and connecting the logic to the UI and then after make the test
+// for it

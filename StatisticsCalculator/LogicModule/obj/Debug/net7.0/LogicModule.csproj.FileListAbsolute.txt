@@ -1,0 +1,12 @@
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\bin\Debug\net7.0\LogicModule.deps.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\bin\Debug\net7.0\LogicModule.dll
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\bin\Debug\net7.0\LogicModule.pdb
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\LogicModule.csproj.AssemblyReference.cache
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\LogicModule.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\LogicModule.AssemblyInfoInputs.cache
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\LogicModule.AssemblyInfo.cs
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\LogicModule.csproj.CoreCompileInputs.cache
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\LogicModule.dll
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\refint\LogicModule.dll
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\LogicModule.pdb
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\obj\Debug\net7.0\ref\LogicModule.dll

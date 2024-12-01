@@ -1,25 +1,32 @@
-﻿@* @{ *@
-@*     ViewData["Title"] = "Home Page"; *@
-@* } *@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
 
 @model StatisticsCalculator.Models.MeanCalculatorModel
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <h3>Enter values below, then select an operation</h3>
-    <div class="row">
-        <div class="col"><h1>Calculator</h1></div>
-        <div class="col"><button type="button" class="btn btn-outline-secondary">Clear</button></div>
-    </div>
+    
+    <form asp-action="Calculate" method="post">
+        <div class="row">
+            <div class="col"><h1>Calculator</h1></div>
+            <div class="col"><button type="submit" name="operation" value="clear" class="btn btn-outline-secondary">Clear</button></div>
+        </div>
+    </form>
+    @if (Model.Result != null)
+    {
+        <p><strong>@Model.Result</strong></p>
+    }
     <form asp-action="Calculate" method="post">
         <div class="form-group">
             <h3>Values</h3>
             <label for="values">Enter numbers (one per line):</label>
             <textarea name="Values" id="values" rows="5" class="form-control"></textarea>
-            @if (Model.Result != null)
-            {
-                <p><strong>Result: @Model.Result</strong></p>
-            }
+            @* @if (Model.Result != null) *@
+            @* { *@
+            @*     <p><strong>Result: @Model.Result</strong></p> *@
+            @* } *@
         </div>
     
         @* <button type="submit" name="operation" value="mean" class="btn btn-outline-secondary" style="margin: 10px">Compute Mean</button> *@
@@ -27,8 +34,8 @@
         @* <button type="submit" name="operation" value="count" class="btn btn-outline-secondary" style="margin: 10px">Count Numbers</button> *@
         <div>
             <div class="col"><h2>Descriptive Statistics</h2></div>
-            <button type="button" class="btn btn-outline-secondary" style="margin: 10px">Compute Sample Standard Deviation | one value per line</button> <br>
-            <button type="button" class="btn btn-outline-secondary" style="margin: 10px">Compute Population Standard Deviation | one value per line</button> <br>
+            <button type="submit" name="operation" value="ssd" class="btn btn-outline-secondary" style="margin: 10px">Compute Sample Standard Deviation | one value per line</button> <br>
+            <button type="submit" name="operation" value="psd" class="btn btn-outline-secondary" style="margin: 10px">Compute Population Standard Deviation | one value per line</button> <br>
             <button type="submit" name="operation" value="mean" class="btn btn-outline-secondary" style="margin: 10px">>Compute Mean | one value per line</button> <br>
             <button type="button" class="btn btn-outline-secondary" style="margin: 10px">>Compute Z Score | value, mean, stdDev on one line</button>
         </div>

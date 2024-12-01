@@ -60,3 +60,14 @@ C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\
 C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.pdb
 C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.genruntimeconfig.cache
 C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\ref\StatisticsCalculator.dll
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\LogicModule\obj\LogicModule.csproj.nuget.dgspec.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\LogicModule\obj\project.assets.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\LogicModule\obj\project.packagespec.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\obj\project.assets.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\obj\project.packagespec.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\obj\StatCalcTest.csproj.nuget.dgspec.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\nunit.framework.dll
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\obj\Debug\net6.0\StatisticsCalculator.csproj.CopyComplete
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\LogicModule\bin\Debug\net7.0\LogicModule.deps.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\bin\Debug\net7.0\StatCalcTest.deps.json
+C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\StatCalcTest\bin\Debug\net7.0\StatCalcTest.runtimeconfig.json
