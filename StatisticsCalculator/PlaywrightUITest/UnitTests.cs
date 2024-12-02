@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using Microsoft.Playwright;
 
 namespace PlaywrightUITest;
@@ -71,14 +72,11 @@ public class Tests : PageTest
         var inputField = Page.Locator("textarea");
         var stdButton = Page.Locator("text=Compute Sample Standard Deviation | one value per line");
         
-        
-        var clearButton = Page.Locator("text=Clear");
-        await clearButton.ClickAsync();
-
-        
         await inputField.FillAsync("9\n2\n5\n4\n12\n7\n8\n11\n9\n3\n7\n4\n12\n5\n4\n10\n9\n6\n9\n4");
         await stdButton.ClickAsync();
         
+        // Please forgive defying Arrange-Act-Assert;
+        // for some reason I could not get Playwright to detect this area in the default state
         var results = Page.Locator("text=Sample Standard Deviation: ");
         textFieldResult = await results.TextContentAsync();
         
@@ -90,21 +88,55 @@ public class Tests : PageTest
     [Test]
     public async Task ComputePopulationStandardDeviationFails()
     {
+        await Page.GotoAsync(URL);
         
+        // Locate the input field and enter values (one per line)
+        var inputField = Page.Locator("textarea");
+        var stdButton = Page.Locator("text=Compute Population Standard Deviation | one value per line");
+
+        var clearButton = Page.Locator("text=Clear");
+        await clearButton.ClickAsync();
+        
+        await stdButton.ClickAsync();
+        var results = Page.Locator("text=Error: Input cannot be empty");
+        
+        string resultsText = await results.TextContentAsync();
+        Assert.That(resultsText, Is.EqualTo("Error: Input cannot be empty."));
     }
     
     // preq-UNIT-TEST-8
     [Test]
     public async Task ComputePopulationStandardDeviationFails2()
     {
+        await Page.GotoAsync(URL);
+        var stdButton = Page.Locator("text=Compute Sample Standard Deviation");
+        var inputField = Page.Locator("textarea");
+
+        await inputField.FillAsync("7");
         
+        await stdButton.ClickAsync();
+        var results = Page.Locator("text=Sample Standard Deviation: NaN");
+        string resultsText = await results.TextContentAsync();
+        
+        Assert.That(resultsText, Is.EqualTo("Sample Standard Deviation: NaN"));
     }
     
     // preq-UNIT-TEST-9
     [Test]
     public async Task ComputeMean()
     {
+        await Page.GotoAsync(URL);
         
+        var inputField = Page.Locator("textarea");
+        var meanButton = Page.Locator("text=Compute Mean");
+
+        await inputField.FillAsync("9\n2\n5\n4\n12\n7\n8\n11\n9\n3\n7\n4\n12\n5\n4\n10\n9\n6\n9\n4");
+        await meanButton.ClickAsync();
+        
+        var result = Page.Locator("text=Mean:");
+        string resultsText = await result.TextContentAsync();
+        
+        Assert.That(resultsText, Is.EqualTo("Mean: 7"));
     }
     
     // preq-UNIT-TEST-10
