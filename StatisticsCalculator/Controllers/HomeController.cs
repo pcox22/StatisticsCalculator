@@ -65,7 +65,7 @@ namespace StatisticsCalculator.Controllers
                 {
                     case "ssd":
                         model.Result =
-                            $"Sample Standard Deviation:\n{LogicModule.Statistics.ComputeSampleStandardDeviation(numbers)}";
+                            $"Sample Standard Deviation: {LogicModule.Statistics.ComputeSampleStandardDeviation(numbers)}";
                         break;
                     case "psd":
                         model.Result =

@@ -63,22 +63,27 @@ public class Tests : PageTest
     public async Task ComputeSampleStandardDeviation()
     {
         await Page.GotoAsync(URL);
-
-        const float expectedStandardDeviation = 3.060787652326F;
+        const double expectedStandardDeviation = 3.060787652326F;
+        double sampleSTD = 0;
+        string textFieldResult;
         
         // Locate the input field and enter values (one per line)
         var inputField = Page.Locator("textarea");
         var stdButton = Page.Locator("text=Compute Sample Standard Deviation | one value per line");
         
-        await inputField.FillAsync("9\n2\n5\n4\n12\n7\n8\n11\n9\n3\n7\n4\n12\n5\n4\n10\n9\n6\n9\n4");
         
+        var clearButton = Page.Locator("text=Clear");
+        await clearButton.ClickAsync();
+
+        
+        await inputField.FillAsync("9\n2\n5\n4\n12\n7\n8\n11\n9\n3\n7\n4\n12\n5\n4\n10\n9\n6\n9\n4");
         await stdButton.ClickAsync();
         
-        var resultArea = Page.Locator("textarea");
+        var results = Page.Locator("text=Sample Standard Deviation: ");
+        textFieldResult = await results.TextContentAsync();
         
-        // sampleSTD = results.text ?? - Can reuse Constant's method to pull just numbers from results textfield
-        // Assert.That(sampleSTD, Is.EqualTo(3.060787652326));
-        
+        Assert.That(textFieldResult, Is.EqualTo("Sample Standard Deviation: 3.0607876523260447"));
+        await Browser.CloseAsync();
     }
     
     // preq-UNIT-TEST-7

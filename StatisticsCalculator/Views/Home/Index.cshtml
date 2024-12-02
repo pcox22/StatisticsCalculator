@@ -14,17 +14,18 @@
     <div class="row" style="background-color: #FFECD7; color: #000000;">
         @if (Model.Result == null)
         {
-            Model.Result = "Enter values below, then select an operation";
+            <p><strong>Enter values below, then select an operation</strong></p>
         }
         @if (Model.Result != null)
         {
+            <p><strong>@Model.Label</strong></p>
             <p><strong>@Model.Result</strong></p>
         }
     </div>
     <form asp-action="Calculate" method="post">
         <div class="form-group">
             <h3 align="left">Values</h3>
-            <textarea name="Values" id="values" rows="5" class="form-control"></textarea>
+            <textarea asp-for="Values" name="Values" id="values" rows="5" class="form-control"></textarea>
             @* @if (Model.Result != null) *@
             @* { *@
             @*     <p><strong>Result: @Model.Result</strong></p> *@
