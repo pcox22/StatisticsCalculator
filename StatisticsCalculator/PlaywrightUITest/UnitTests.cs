@@ -7,49 +7,26 @@ namespace PlaywrightUITest;
 public class Tests : PageTest
 {
     public string URL = "https://localhost:7150";
-    
-    // Default playwright test
+
+    //preq-E2E-TEST-5
     [Test]
-    public async Task HomepageHasPlaywrightInTitleAndGetStartedLinkLinkingtoTheIntroPage()
+    public async Task VerifyPageTitle()
     {
+        // Gather the title page and compare it against the expected title
         await Page.GotoAsync(URL);
-
-        // Expect a title "to contain" a substring.
-        //await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
-
-        // create a locator
-        var getStarted = Page.Locator("text=Calculator");
-        var clearButton = Page.Locator("text=Clear");
-        var textField = Page.Locator("//input[@id='values']");
-
-        // Expect an attribute "to be strictly equal" to the value.
-        //await Expect(getStarted).ToHaveAttributeAsync("href", "/docs/intro");
-
-        // Click the get started link.
-        //await getStarted.ClickAsync();
-
-        // Expects the URL to contain intro.
-        //await Expect(Page).ToHaveURLAsync(new Regex(".*intro"));
-
+        string pageTitle = await Page.TitleAsync();
+        Assert.That(pageTitle, Is.EqualTo("Calculator"));
+        
+        await Expect(Page).ToHaveTitleAsync(new Regex("Calculator"));
         await Browser.CloseAsync();
-    }
-
-    public async Task ClearButtonRemovesEntriesFromTextField()
-    {
-
-        // Navigate to the target page
-        await Page.GotoAsync(URL);
+        
+        /*
 
         // Locate the input field and enter values (one per line)
         var inputField = Page.Locator("textarea");
         var clearButton = Page.Locator("text=Clear");
         
         await inputField.FillAsync("5\n10\n15");
-        await clearButton.ClickAsync();
-        
-        // Currently trying to figure out Playwright syntax and documentation
-        // The following is meant to check whether or not the text field still contains any elements
-        //Expect(inputField.TextContentAsync() == null);
         
 
         // All code from here is sample snippets that will be delegated into unique tests for different functions
@@ -74,8 +51,76 @@ public class Tests : PageTest
         await Page.ClickAsync("button:has-text('Compute Z Score')");
         var zScoreResult = await Page.Locator("result-selector").TextContentAsync(); // Replace "result-selector" with the actual result locator
         Assert.That(zScoreResult, Is.EqualTo("0")); // Replace with expected result
+        
 
         // Close the browser
         await Browser.CloseAsync();
+        */
     }
+
+    // preq-UNIT-TEST-6
+    [Test]
+    public async Task ComputeSampleStandardDeviation()
+    {
+        await Page.GotoAsync(URL);
+
+        const float expectedStandardDeviation = 3.060787652326F;
+        
+        // Locate the input field and enter values (one per line)
+        var inputField = Page.Locator("textarea");
+        var stdButton = Page.Locator("text=Compute Sample Standard Deviation | one value per line");
+        
+        await inputField.FillAsync("9\n2\n5\n4\n12\n7\n8\n11\n9\n3\n7\n4\n12\n5\n4\n10\n9\n6\n9\n4");
+        
+        await stdButton.ClickAsync();
+        
+        var resultArea = Page.Locator("textarea");
+        
+        // sampleSTD = results.text ?? - Can reuse Constant's method to pull just numbers from results textfield
+        // Assert.That(sampleSTD, Is.EqualTo(3.060787652326));
+        
+    }
+    
+    // preq-UNIT-TEST-7
+    [Test]
+    public async Task ComputePopulationStandardDeviationFails()
+    {
+        
+    }
+    
+    // preq-UNIT-TEST-8
+    [Test]
+    public async Task ComputePopulationStandardDeviationFails2()
+    {
+        
+    }
+    
+    // preq-UNIT-TEST-9
+    [Test]
+    public async Task ComputeMean()
+    {
+        
+    }
+    
+    // preq-UNIT-TEST-10
+    [Test]
+    public async Task ComputeZScore()
+    {
+        
+    }
+    
+    // preq-UNIT-TEST-11
+    [Test]
+    public async Task ComputeSingleLinearRegression()
+    {
+        
+    }
+    
+    // preq-UNIT-TEST-12
+    [Test]
+    public async Task ComputeYFromRegression()
+    {
+        
+    }
+    
 }

@@ -38,6 +38,14 @@ namespace StatisticsCalculator.Controllers
         //     
         // }
         // This method will be called when a form is submitted
+
+        [HttpPost]
+        public IActionResult Clear(MeanCalculatorModel model)
+        {
+            model.Result = "Enter values below, then select an operation";
+            return View("Index", model);
+        }
+        
         [HttpPost]
         public IActionResult Calculate(MeanCalculatorModel model, string operation)
         {
@@ -77,6 +85,7 @@ namespace StatisticsCalculator.Controllers
             else
             {
                 ModelState.AddModelError("", "Input cannot be empty.");
+                model.Result = $"Input cannot be empty.";
             }
 
             // Return the updated model with the result to the view
