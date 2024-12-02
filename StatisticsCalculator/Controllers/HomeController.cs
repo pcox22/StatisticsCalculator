@@ -56,7 +56,8 @@ namespace StatisticsCalculator.Controllers
 
                 if (!numbers.Any())
                 {
-                    ModelState.AddModelError("", "Please enter valid numbers.");
+                    ModelState.AddModelError("", "Error: Please enter valid numbers.");
+                    model.Result = $"Error: Please enter valid numbers.";
                     return View("Index", model);
                 }
 
@@ -72,8 +73,12 @@ namespace StatisticsCalculator.Controllers
                             $"Population Standard Deviation:\n{LogicModule.Statistics.ComputePopulationStandardDeviation(numbers)}";
                         break;
                     case "mean":
-                        model.Result = $"Mean:\n{LogicModule.Statistics.CalculateMean(numbers)}";
+                        model.Result = $"Mean: {LogicModule.Statistics.CalculateMean(numbers)}";
                         break;
+                    case "zscore":
+                        model.Result = $"Z-Score: "; //Get the method from Constant's branch
+                        break;
+                        
                     // case "clear":
                     //     model.Result = $"Hi";
                     //     break;
@@ -84,8 +89,8 @@ namespace StatisticsCalculator.Controllers
             }
             else
             {
-                ModelState.AddModelError("", "Input cannot be empty.");
-                model.Result = $"Input cannot be empty.";
+                ModelState.AddModelError("", "Error: Input cannot be empty.");
+                model.Result = $"Error: Input cannot be empty.";
             }
 
             // Return the updated model with the result to the view

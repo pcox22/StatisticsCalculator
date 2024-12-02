@@ -11,16 +11,28 @@
             <div class="col"><button type="submit" name="operation" value="clear" class="btn btn-outline-secondary">Clear</button></div>
         </div>
     </form>
-    <div class="row" style="background-color: #FFECD7; color: #000000;">
+    <div class="row" style="color: #000000;">
         @if (Model.Result == null)
         {
-            <p><strong>Enter values below, then select an operation</strong></p>
+            <p style="background-color: #FFECD7"><strong>Enter values below, then select an operation</strong></p>
         }
+        
         @if (Model.Result != null)
         {
-            <p><strong>@Model.Label</strong></p>
-            <p><strong>@Model.Result</strong></p>
+            @if (Model.Result.Contains("Error") || Model.Result.Contains("NaN"))
+            {
+                <p style="background-color: red"><strong>@Model.Label</strong></p>
+                <p style="background-color: red"><strong>@Model.Result</strong></p>
+            }
+            else
+            {
+                <p style="background-color: #FFECD7"><strong>@Model.Label</strong></p>
+                <p style="background-color: #FFECD7"><strong>@Model.Result</strong></p>
+            }
+            
         }
+        
+        
     </div>
     <form asp-action="Calculate" method="post">
         <div class="form-group">
@@ -40,7 +52,7 @@
             <button type="submit" name="operation" value="ssd" class="btn btn-outline-secondary" style="width: 100%; margin: 10px; background-color: #EBEBEB; color: #000000">Compute Sample Standard Deviation | one value per line</button> <br>
             <button type="submit" name="operation" value="psd" class="btn btn-outline-secondary" style="width: 100%; margin: 10px; background-color: #EBEBEB; color: #000000">Compute Population Standard Deviation | one value per line</button> <br>
             <button type="submit" name="operation" value="mean" class="btn btn-outline-secondary" style="width: 100%; margin: 10px; background-color: #EBEBEB; color: #000000">>Compute Mean | one value per line</button> <br>
-            <button type="button" class="btn btn-outline-secondary" style="width: 100%; margin: 10px; background-color: #EBEBEB; color: #000000">>Compute Z Score | value, mean, stdDev on one line</button>
+            <button type="button" class="btn btn-outline-secondary" value="zscore" style="width: 100%; margin: 10px; background-color: #EBEBEB; color: #000000">>Compute Z Score | value, mean, stdDev on one line</button>
         </div>
         <div>
             <div class="col"><h2>Single Linear Regression</h2></div>

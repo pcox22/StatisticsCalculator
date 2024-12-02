@@ -9,20 +9,20 @@ public class Statistics
     //calculate mean
     public static double CalculateMean(List<double> valuesList)
     {
-        int sumAccumulator = 0;
+        double sumAccumulator = 0;
         if (valuesList.Count== 0)
         {
             //should throw an error
             throw new ArgumentException("valuesList parameter cannot be null or empty");
         }
 
-        foreach (int value in valuesList)
+        foreach (double value in valuesList)
         {
             sumAccumulator = sumAccumulator + value;
         }
 
         // # Return the average (sum divided by the number of values we accumulated)
-        return (double)sumAccumulator / valuesList.Count;
+        return sumAccumulator / valuesList.Count;
     }
     
     // Function to compute the sum of squared differences from the mean
