@@ -110,4 +110,12 @@ public class Tests
         test4.Add(7);
         Assert.That(Math.Round(LogicModule.Statistics.ComputePopulationStandardDeviation(test4),5), Is.EqualTo(1.41421d));
     }
+
+    [Test]
+    public void ZScoreTest()
+    {
+        Assert.That(Math.Round(LogicModule.Statistics.ZScore(7d, 9d, 2.7d), 2), Is.EqualTo(-0.74d));
+    }
+    
+    
 }

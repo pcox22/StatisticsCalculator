@@ -44,27 +44,43 @@ namespace StatisticsCalculator.Controllers
             if (!string.IsNullOrEmpty(model.Values))
             {
                 // Parse the numbers from the input
-                var numbers = ParseNumbers(model.Values);
+                var numbers1 = ParseNumbers(model.Values);
+                List<double> numbers2 = ParseNumbersOneLine(model.Values);
 
-                if (!numbers.Any())
-                {
-                    ModelState.AddModelError("", "Please enter valid numbers.");
-                    return View("Index", model);
-                }
+                // if (!(numbers1.Any() || numbers1.Any()))
+                // {
+                //     ModelState.AddModelError("", "Please enter valid numbers.");
+                //     return View("Index", model);
+                // }
+
+                // if (numbers2.Count < 3 )
+                // {
+                //     ModelState.AddModelError("", "Please enter only 3 numbers on one line.");
+                //     return View("Index", model);
+                // }
 
                 // Perform the selected operation
                 switch (operation)
                 {
                     case "ssd":
                         model.Result =
-                            $"Sample Standard Deviation:\n{LogicModule.Statistics.ComputeSampleStandardDeviation(numbers)}";
+                            $"Sample Standard Deviation:\n{LogicModule.Statistics.ComputeSampleStandardDeviation(numbers1)}";
                         break;
                     case "psd":
                         model.Result =
-                            $"Population Standard Deviation:\n{LogicModule.Statistics.ComputePopulationStandardDeviation(numbers)}";
+                            $"Population Standard Deviation:\n{LogicModule.Statistics.ComputePopulationStandardDeviation(numbers1)}";
                         break;
                     case "mean":
-                        model.Result = $"Mean:\n{LogicModule.Statistics.CalculateMean(numbers)}";
+                        model.Label = $"Mean:";
+                        model.Result = $"{LogicModule.Statistics.CalculateMean(numbers1)}";
+                        break;
+                    case "zScore":
+                        model.Result = 
+                            $"Z Score:\n{LogicModule.Statistics.ComputeZScore(numbers2)}";
+                        break;
+                    case "getY":
+                        model.Result = 
+                            $"Value of Y:\n{LogicModule.LinearRegression.ComputeForYLinearRegression(numbers2)}";
                         break;
                     // case "clear":
                     //     model.Result = $"Hi";
@@ -86,12 +102,29 @@ namespace StatisticsCalculator.Controllers
         // Parse input values and convert them to a list of numbers
         private List<double> ParseNumbers(string values)
         {
+            List<double> test = values.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(s => double.TryParse(s, out double n) ? n : (double?)null)
+                .Where(n => n.HasValue)
+                .Select(n => n.Value)
+                .ToList();
+            Console.WriteLine(test[0]);
             return values.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(s => double.TryParse(s, out double n) ? n : (double?)null)
                 .Where(n => n.HasValue)
                 .Select(n => n.Value)
                 .ToList();
         }
+        private List<double> ParseNumbersOneLine(string values)
+        {
+            return values.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList()[0].Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(s => double.TryParse(s, out double n) ? n : (double?)null)
+                .Where(n => n.HasValue)
+                .Select(n => n.Value)
+                .ToList();
+        }
+
+
+
     }
 }
 

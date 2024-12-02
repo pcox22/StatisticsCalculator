@@ -16,39 +16,32 @@
     </form>
     @if (Model.Result != null)
     {
+        <p><strong>@Model.Label</strong></p>
         <p><strong>@Model.Result</strong></p>
     }
     <form asp-action="Calculate" method="post">
         <div class="form-group">
             <h3>Values</h3>
             <label for="values">Enter numbers (one per line):</label>
-            <textarea name="Values" id="values" rows="5" class="form-control"></textarea>
+            <textarea asp-for="Values" name="Values" id="values" rows="5" class="form-control"></textarea>
             @* @if (Model.Result != null) *@
             @* { *@
             @*     <p><strong>Result: @Model.Result</strong></p> *@
             @* } *@
         </div>
-    
-        @* <button type="submit" name="operation" value="mean" class="btn btn-outline-secondary" style="margin: 10px">Compute Mean</button> *@
-        @* <button type="submit" name="operation" value="sum" class="btn btn-outline-secondary" style="margin: 10px">Compute Sum</button> *@
-        @* <button type="submit" name="operation" value="count" class="btn btn-outline-secondary" style="margin: 10px">Count Numbers</button> *@
         <div>
             <div class="col"><h2>Descriptive Statistics</h2></div>
             <button type="submit" name="operation" value="ssd" class="btn btn-outline-secondary" style="margin: 10px">Compute Sample Standard Deviation | one value per line</button> <br>
             <button type="submit" name="operation" value="psd" class="btn btn-outline-secondary" style="margin: 10px">Compute Population Standard Deviation | one value per line</button> <br>
             <button type="submit" name="operation" value="mean" class="btn btn-outline-secondary" style="margin: 10px">>Compute Mean | one value per line</button> <br>
-            <button type="button" class="btn btn-outline-secondary" style="margin: 10px">>Compute Z Score | value, mean, stdDev on one line</button>
+            <button type="submit" name="operation" value="zScore" class="btn btn-outline-secondary" style="margin: 10px">>Compute Z Score | value, mean, stdDev on one line</button>
         </div>
         <div>
             <div class="col"><h2>Single Linear Regression</h2></div>
             <button type="button" class="btn btn-outline-secondary" style="margin: 10px">Compute Single Linear Regression Formula | one x,y pair per line</button> <br>
-            <button type="button" class="btn btn-outline-secondary" style="margin: 10px">Compute Y from Linear Regression Formula | x, m, b on one line</button> <br>
+            <button type="submit" name="operation" value="getY" class="btn btn-outline-secondary" style="margin: 10px">Compute Y from Linear Regression Formula | x, m, b on one line</button> <br>
         </div>
     </form>
-    @* <div style="margin: 10px"> *@
-    @*     <h3>Values</h3> *@
-    @*     <input style="height: 250px; width: 400px;" width="50px" height="100px" type="text"> *@
-    @* </div> *@
     <br>
     
     
