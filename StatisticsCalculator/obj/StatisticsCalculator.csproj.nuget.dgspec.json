@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj": {}
+    "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj": {
+    "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj",
         "projectName": "StatisticsCalculator",
-        "projectPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj",
+        "projectPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj",
         "packagesPath": "C:\\Users\\10jon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\obj\\",
+        "outputPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\10jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.Playwright.NUnit": {
+              "target": "Package",
+              "version": "[1.27.1, )"
+            },
             "NUnit": {
               "target": "Package",
               "version": "[3.13.3, )"

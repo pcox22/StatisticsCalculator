@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicModule", "LogicModule\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatCalcTest", "StatCalcTest\StatCalcTest.csproj", "{499A4C13-D567-41BE-884B-57CA4482161B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaywrightUITest", "PlaywrightUITest\PlaywrightUITest.csproj", "{F70BDE6D-F78E-42D0-81E7-98E88326DDA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{499A4C13-D567-41BE-884B-57CA4482161B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{499A4C13-D567-41BE-884B-57CA4482161B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{499A4C13-D567-41BE-884B-57CA4482161B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70BDE6D-F78E-42D0-81E7-98E88326DDA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70BDE6D-F78E-42D0-81E7-98E88326DDA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70BDE6D-F78E-42D0-81E7-98E88326DDA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70BDE6D-F78E-42D0-81E7-98E88326DDA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

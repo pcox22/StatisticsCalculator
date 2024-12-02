@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Constant Jr\\.nuget\\packages\\": {}
+    "C:\\Users\\10jon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\LogicModule\\LogicModule.csproj",
+      "projectUniqueName": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\LogicModule\\LogicModule.csproj",
       "projectName": "LogicModule",
-      "projectPath": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\LogicModule\\LogicModule.csproj",
-      "packagesPath": "C:\\Users\\Constant Jr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\LogicModule\\obj\\",
+      "projectPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\LogicModule\\LogicModule.csproj",
+      "packagesPath": "C:\\Users\\10jon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\LogicModule\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Constant Jr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\10jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
