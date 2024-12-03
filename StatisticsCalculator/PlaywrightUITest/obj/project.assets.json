@@ -1672,19 +1672,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\10jon\\.nuget\\packages\\": {}
+    "C:\\Users\\Constant Jr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\PlaywrightUITest\\PlaywrightUITest.csproj",
+      "projectUniqueName": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\PlaywrightUITest\\PlaywrightUITest.csproj",
       "projectName": "PlaywrightUITest",
-      "projectPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\PlaywrightUITest\\PlaywrightUITest.csproj",
-      "packagesPath": "C:\\Users\\10jon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\PlaywrightUITest\\obj\\",
+      "projectPath": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\PlaywrightUITest\\PlaywrightUITest.csproj",
+      "packagesPath": "C:\\Users\\Constant Jr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\PlaywrightUITest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\10jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Constant Jr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1751,7 +1751,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj": {}
+    "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj": {
+    "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj",
         "projectName": "StatisticsCalculator",
-        "projectPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj",
-        "packagesPath": "C:\\Users\\10jon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\10jon\\OneDrive\\Desktop\\CS Labs & Assignments\\Software QA\\Hw2\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator\\obj\\",
+        "projectPath": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\StatisticsCalculator.csproj",
+        "packagesPath": "C:\\Users\\Constant Jr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Constant Jr\\Documents\\GitHub\\StatisticsCalculator\\StatisticsCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\10jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Constant Jr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

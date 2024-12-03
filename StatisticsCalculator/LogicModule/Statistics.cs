@@ -22,7 +22,7 @@ public class Statistics
         }
 
         // # Return the average (sum divided by the number of values we accumulated)
-        return (double)sumAccumulator / valuesList.Count;
+        return sumAccumulator / valuesList.Count;
     }
     
     // Function to compute the sum of squared differences from the mean
@@ -32,7 +32,7 @@ public class Statistics
         if (valuesList.Count == 0)
         {
             //should throw an error
-            Console.WriteLine("valuesList parameter cannot be null or empty");
+            throw new Exception("List is Empty");
         }
         else
         {
