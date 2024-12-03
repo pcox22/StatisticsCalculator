@@ -81,4 +81,4 @@ A total of 1 test files matched the specified pattern.
 Passed!  - Failed:     0, Passed:    17, Skipped:     0, Total:    17, Duration: 28 ms - StatCalcTest.dll (net7.0)
 ```
 # Final Video Presentation
-link will be here
+[YoutubeVideo](https://youtu.be/vd-EIj9jFHw?si=2KTYNmOxH_cgwgOb)
