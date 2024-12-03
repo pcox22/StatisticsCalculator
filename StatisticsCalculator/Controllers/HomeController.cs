@@ -47,6 +47,10 @@ namespace StatisticsCalculator.Controllers
                 var numbers1 = ParseNumbers(model.Values);
                 List<double> numbers2 = ParseNumbersOneLine(model.Values);
 
+                var lineqListX = ParseXYValues(model.Values).Item1;
+                var lineqListY = ParseXYValues(model.Values).Item2;
+                
+
                 // if (!(numbers1.Any() || numbers1.Any()))
                 // {
                 //     ModelState.AddModelError("", "Please enter valid numbers.");
@@ -78,6 +82,10 @@ namespace StatisticsCalculator.Controllers
                         model.Result = 
                             $"Z Score:\n{LogicModule.Statistics.ComputeZScore(numbers2)}";
                         break;
+                    case "linEq":
+                        model.Result = 
+                            $"{LogicModule.LinearRegression.ComputeLinearEquation(lineqListX, lineqListY)}";
+                        break;
                     case "getY":
                         model.Result = 
                             $"Value of Y:\n{LogicModule.LinearRegression.ComputeForYLinearRegression(numbers2)}";
@@ -102,12 +110,6 @@ namespace StatisticsCalculator.Controllers
         // Parse input values and convert them to a list of numbers
         private List<double> ParseNumbers(string values)
         {
-            List<double> test = values.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(s => double.TryParse(s, out double n) ? n : (double?)null)
-                .Where(n => n.HasValue)
-                .Select(n => n.Value)
-                .ToList();
-            Console.WriteLine(test[0]);
             return values.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(s => double.TryParse(s, out double n) ? n : (double?)null)
                 .Where(n => n.HasValue)
@@ -123,7 +125,27 @@ namespace StatisticsCalculator.Controllers
                 .ToList();
         }
 
-
+        public (List<double> XValues, List<double> YValues) ParseXYValues(string values)
+        {
+            var xValues = new List<double>();
+            var yValues = new List<double>();
+            
+            foreach (var line in values.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                var parts = line.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                
+                if (parts.Length == 2 && 
+                    double.TryParse(parts[0], out double x) && 
+                    double.TryParse(parts[1], out double y))
+                {
+                    xValues.Add(x);
+                    yValues.Add(y);
+                }
+            }
+            Console.WriteLine(xValues[1]);
+            Console.WriteLine(yValues[1]);
+            return (xValues, yValues);
+        }
 
     }
 }
