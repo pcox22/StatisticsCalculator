@@ -19,6 +19,8 @@ This aim of this project is to create an online calculator which allows users to
 #### Patrick Cox
 
 # Architecture
+![Architecture](https://github.com/user-attachments/assets/5407d18f-5fa6-4272-b460-c71abae530be)
+
 # Environment
 This is a cross-platform application and should work in Windows 10+, Mac OSx Ventura+, and Linux environments. Note that the application has only been carefully tested in Windows 11.
 
