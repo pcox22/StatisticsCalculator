@@ -48,6 +48,8 @@ A total of 1 test files matched the specified pattern.
 Passed!  - Failed:     0, Passed:   132, Skipped:     0, Total:   132, Duration: 39 ms - HighMatch.Compass.UnitTest.Extensions.dll (net7.0)
 ```
 ## Reviewing Unit Test Coverage
+![image](https://github.com/user-attachments/assets/a70f011d-7655-4a20-b6be-c27cacdc8028)
+
 ## Executing End-To-End Tests
 ```bash
 # From /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests
