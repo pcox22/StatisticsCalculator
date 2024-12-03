@@ -22,7 +22,7 @@ public class Statistics
         }
 
         // # Return the average (sum divided by the number of values we accumulated)
-        return sumAccumulator / valuesList.Count;
+        return (double)sumAccumulator / valuesList.Count;
     }
     
     // Function to compute the sum of squared differences from the mean
@@ -90,6 +90,13 @@ public class Statistics
     {
         return ComputeStandardDeviation(valuesList, true);
     }
-    
-    
+
+    public static double ZScore(double value, double mean, double standardDeviation)
+    {
+        return Difference(value, mean) / standardDeviation;
+    }
+    public static double ComputeZScore(List<double> valuesList)
+    {
+        return Difference(valuesList[0], valuesList[1]) / valuesList[2];
+    }
 }

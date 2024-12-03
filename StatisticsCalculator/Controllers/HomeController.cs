@@ -53,30 +53,42 @@ namespace StatisticsCalculator.Controllers
             {
                 // Parse the numbers from the input
                 var numbers = ParseNumbers(model.Values);
-
-                if (!numbers.Any())
-                {
-                    ModelState.AddModelError("", "Error: Please enter valid numbers.");
-                    model.Result = $"Error: Please enter valid numbers.";
-                    return View("Index", model);
-                }
-
+                List<double> numbers2 = ParseNumbersOneLine(model.Values);
+                
+                var lineqListX = ParseXYValues(model.Values).Item1;
+                var lineqListY = ParseXYValues(model.Values).Item2;
+                
                 // Perform the selected operation
                 switch (operation)
                 {
                     case "ssd":
-                        model.Result =
-                            $"Sample Standard Deviation: {LogicModule.Statistics.ComputeSampleStandardDeviation(numbers)}";
+                        model.Result = $"Sample Standard Deviation: {LogicModule.Statistics.ComputeSampleStandardDeviation(numbers)}";
                         break;
                     case "psd":
                         model.Result =
                             $"Population Standard Deviation:\n{LogicModule.Statistics.ComputePopulationStandardDeviation(numbers)}";
                         break;
                     case "mean":
-                        model.Result = $"Mean: {LogicModule.Statistics.CalculateMean(numbers)}";
+                        model.Result = 
+                            $"Mean: {LogicModule.Statistics.CalculateMean(numbers)}";
                         break;
                     case "zscore":
-                        model.Result = $"Z-Score: "; //Get the method from Constant's branch
+                        if (numbers2.Count != 3)
+                        {
+                            ModelState.AddModelError("", "Error: Please enter 3 numbers. (Value, Mean, stdDev");
+                            model.Result = "Error: Please enter valid numbers.";
+                            return View("Index", model);
+                        }
+                        model.Result = 
+                            $"Z-Score: {LogicModule.Statistics.ComputeZScore(numbers2)}";
+                        break;
+                    case "Y":
+                        model.Result = 
+                            $"Y = {LogicModule.LinearRegression.ComputeForYLinearRegression(numbers2)}";
+                        break;
+                    case "linReg":
+                        model.Result = 
+                            $"{LogicModule.LinearRegression.ComputeLinearEquation(lineqListX, lineqListY)}";
                         break;
                         
                     // case "clear":
@@ -105,6 +117,34 @@ namespace StatisticsCalculator.Controllers
                 .Where(n => n.HasValue)
                 .Select(n => n.Value)
                 .ToList();
+        }
+        private List<double> ParseNumbersOneLine(string values)
+        {
+            return values.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList()[0].Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
+                .Select(s => double.TryParse(s, out double n) ? n : (double?)null)
+                .Where(n => n.HasValue)
+                .Select(n => n.Value)
+                .ToList();
+        }
+        
+        public (List<double> XValues, List<double> YValues) ParseXYValues(string values)
+        {
+            var xValues = new List<double>();
+            var yValues = new List<double>();
+            
+            foreach (var line in values.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                var parts = line.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                
+                if (parts.Length == 2 && 
+                    double.TryParse(parts[0], out double x) && 
+                    double.TryParse(parts[1], out double y))
+                {
+                    xValues.Add(x);
+                    yValues.Add(y);
+                }
+            }
+            return (xValues, yValues);
         }
     }
 }

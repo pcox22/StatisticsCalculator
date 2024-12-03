@@ -545,3 +545,6 @@ C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\Statistics
 C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\.playwright\package\lib\vite\traceViewer\uiMode.voC1ZiOQ.css
 C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\.playwright\package\lib\vite\traceViewer\workbench.C-zR9ysA.css
 C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\.playwright\package\lib\vite\traceViewer\xtermModule.DSXBckUd.css
+C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\PlaywrightTests\bin\Debug\net8.0\PlaywrightTests.deps.json
+C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\PlaywrightTests\bin\Debug\net8.0\PlaywrightTests.runtimeconfig.json
+C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\bin\Debug\net6.0\PlaywrightTests\obj\Debug\net8.0\PlaywrightTests.sourcelink.json

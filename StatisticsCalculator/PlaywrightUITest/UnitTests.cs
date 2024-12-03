@@ -1,5 +1,6 @@
 using System.Net.Mime;
 using Microsoft.Playwright;
+using Microsoft.Playwright.NUnit;
 
 namespace PlaywrightUITest;
 
@@ -19,53 +20,15 @@ public class Tests : PageTest
         Assert.That(pageTitle, Is.EqualTo("Calculator"));
         
         await Expect(Page).ToHaveTitleAsync(new Regex("Calculator"));
-        await Browser.CloseAsync();
-        
-        /*
 
-        // Locate the input field and enter values (one per line)
-        var inputField = Page.Locator("textarea");
-        var clearButton = Page.Locator("text=Clear");
-        
-        await inputField.FillAsync("5\n10\n15");
-        
-
-        // All code from here is sample snippets that will be delegated into unique tests for different functions
-        
-        // Test Sample Standard Deviation
-        await Page.ClickAsync("button:has-text('Compute Sample Standard Deviation')");
-        var sampleStdDevResult = await Page.Locator("result-selector").TextContentAsync(); // Replace "result-selector" with the actual result locator
-        Assert.That(sampleStdDevResult, Is.EqualTo("5")); // Replace with expected result
-
-        // Test Population Standard Deviation
-        await Page.ClickAsync("button:has-text('Compute Population Standard Deviation')");
-        var populationStdDevResult = await Page.Locator("result-selector").TextContentAsync(); // Replace "result-selector" with the actual result locator
-        Assert.That(populationStdDevResult, Is.EqualTo("4.08")); // Replace with expected result
-
-        // Test Mean
-        await Page.ClickAsync("button:has-text('Compute Mean')");
-        var meanResult = await Page.Locator("result-selector").TextContentAsync(); // Replace "result-selector" with the actual result locator
-        Assert.That(meanResult, Is.EqualTo("10")); // Replace with expected result
-
-        // Test Z-Score
-        await inputField.FillAsync("10\n10\n5"); // Example inputs: value, mean, stdDev
-        await Page.ClickAsync("button:has-text('Compute Z Score')");
-        var zScoreResult = await Page.Locator("result-selector").TextContentAsync(); // Replace "result-selector" with the actual result locator
-        Assert.That(zScoreResult, Is.EqualTo("0")); // Replace with expected result
-        
-
-        // Close the browser
-        await Browser.CloseAsync();
-        */
     }
 
     // preq-UNIT-TEST-6
     [Test]
-    public async Task ComputeSampleStandardDeviation()
+    public async Task StandardDeviation_SeveralNumbers_ReturnsCorrectly()
     {
+        // First half of methods were written before working with Playwright's test generator
         await Page.GotoAsync(URL);
-        const double expectedStandardDeviation = 3.060787652326F;
-        double sampleSTD = 0;
         string textFieldResult;
         
         // Locate the input field and enter values (one per line)
@@ -81,12 +44,11 @@ public class Tests : PageTest
         textFieldResult = await results.TextContentAsync();
         
         Assert.That(textFieldResult, Is.EqualTo("Sample Standard Deviation: 3.0607876523260447"));
-        await Browser.CloseAsync();
     }
     
     // preq-UNIT-TEST-7
     [Test]
-    public async Task ComputePopulationStandardDeviationFails()
+    public async Task PopulationSTD_Empty_ReturnsError()
     {
         await Page.GotoAsync(URL);
         
@@ -106,7 +68,7 @@ public class Tests : PageTest
     
     // preq-UNIT-TEST-8
     [Test]
-    public async Task ComputePopulationStandardDeviationFails2()
+    public async Task SampleSTD_OneNumber_ReturnsNaN()
     {
         await Page.GotoAsync(URL);
         var stdButton = Page.Locator("text=Compute Sample Standard Deviation");
@@ -123,7 +85,7 @@ public class Tests : PageTest
     
     // preq-UNIT-TEST-9
     [Test]
-    public async Task ComputeMean()
+    public async Task ComputeMean_SeveralNumbers_ReturnsCorrectly()
     {
         await Page.GotoAsync(URL);
         
@@ -141,23 +103,38 @@ public class Tests : PageTest
     
     // preq-UNIT-TEST-10
     [Test]
-    public async Task ComputeZScore()
+    public async Task ZScore_GivenNumbers_ReturnsCorrectly()
     {
-        
+        await Page.GotoAsync("https://localhost:7150/");
+        await Page.Locator("#values").ClickAsync();
+        await Page.Locator("#values").FillAsync("5.5,7,3.060787652326");
+        await Page.Locator("text=>Compute Z Score").ClickAsync();
+        await Page.GetByText("Z-Score: -").ClickAsync();
+        await Expect(Page.GetByRole(AriaRole.Main)).ToContainTextAsync("Z-Score: -0.49006993309715474");
     }
     
     // preq-UNIT-TEST-11
     [Test]
-    public async Task ComputeSingleLinearRegression()
+    public async Task SingleLinearRegression_GivenNumbers_ReturnsCorrectly()
     {
+        await Page.GotoAsync("https://localhost:7150/");
+        await Page.Locator("#values").ClickAsync();
+        await Page.Locator("#values").FillAsync("5,3\n3,2\n2,15\n1,12.3\n7.5,-3\n4,5\n3,17\n4,3\n6.42,4\n34,5\n,12,17\n,3,-1");
+        await Page.Locator("text=Compute Single Linear Regression Formula").ClickAsync();
         
+        await Expect(Page.GetByRole(AriaRole.Main)).ToContainTextAsync("Y = -0.045961532930936355x + 6.933587781374592");
     }
     
     // preq-UNIT-TEST-12
     [Test]
-    public async Task ComputeYFromRegression()
+    public async Task YFromRegression_GivenInputs_ReturnsCorrectly()
     {
+        await Page.GotoAsync("https://localhost:7150/");
+        await Page.Locator("#values").ClickAsync();
+        await Page.Locator("#values").FillAsync("6,-0.04596,6.9336");
+        await Page.Locator("text=Compute Y from Linear Regression Formula").ClickAsync();
         
+        await Expect(Page.GetByRole(AriaRole.Main)).ToContainTextAsync("Y = 6.65784");
     }
     
 }

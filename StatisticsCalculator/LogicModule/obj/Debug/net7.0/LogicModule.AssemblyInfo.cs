@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LogicModule")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78eb0eb3bbade5a184667cad0725bad00151ce88")]
 [assembly: System.Reflection.AssemblyProductAttribute("LogicModule")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LogicModule")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
