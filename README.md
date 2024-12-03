@@ -34,7 +34,7 @@ To prepare your environment to execute this application:
     $ winget search Microsoft.PowerShell
 
     Determine an id (typically not Preview) and run
-    winget install --id Microsoft.PowerShell --source winget
+    $ winget install --id Microsoft.PowerShell --source winget
     
  5. The project requires that Playright be installed by running from the terminal:
     $ dotnet add package Microsoft.Playwright.NUnit
