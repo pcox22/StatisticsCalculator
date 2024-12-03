@@ -50,18 +50,20 @@ Passed!  - Failed:     0, Passed:   132, Skipped:     0, Total:   132, Duration:
 ```bash
 # From /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests
 
-❯ dotnet test
+❯ PS C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator> dotnet test 
   Determining projects to restore...
   All projects are up-to-date for restore.
-  CalculatorEndToEndTests -> /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests/bin/Debug/net8.0/CalculatorEndToEndTests.dll
-Test run for /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests/bin/Debug/net8.0/CalculatorEndToEndTests.dll (.NETCoreApp,Version=v8.0)
-Microsoft (R) Test Execution Command Line Tool Version 17.8.0 (arm64)
+  PlaywrightUITest -> C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\PlaywrightUITest\bin\Debug\net6.0\PlaywrightU
+  ITest.dll
+  LogicModule -> C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\LogicModule\bin\Debug\net7.0\LogicModule.dll       
+Test run for C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\PlaywrightUITest\bin\Debug\net6.0\PlaywrightUITest.dll (.NETCoreApp,Version=v6.0)
+Microsoft (R) Test Execution Command Line Tool Version 17.4.0 (x64)
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
 
-Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 2 s - CalculatorEndToEndTests.dll (net8.0)
+Passed!  - Failed:     0, Passed:    17, Skipped:     0, Total:    17, Duration: 28 ms - StatCalcTest.dll (net7.0)
 ```
 # Final Video Presentation
 link will be here
