@@ -231,6 +231,4 @@ public class Tests
     {
         Assert.That(LogicModule.LinearRegression.ComputeForY(1.535d,61.272186542107434d, -39.061955918838656d), Is.EqualTo(54.990850423296244d));
     }
-    
-    
 }

@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = StatCalcTest
-build_property.ProjectDir = C:\Users\Constant Jr\Documents\GitHub\StatisticsCalculator\StatisticsCalculator\StatCalcTest\
+build_property.ProjectDir = C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\StatCalcTest\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
