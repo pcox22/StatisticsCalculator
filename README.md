@@ -27,7 +27,20 @@ This is a cross-platform application and should work in Windows 10+, Mac OSx Ven
 To prepare your environment to execute this application:
  1. Download and install the latest version of any C# IDE. Most are able to run C#.Net Applications. I would recommend JetBrains Rider. [Click here to be redirected to their website](https://www.jetbrains.com/rider/download/#section=windows)
 
- 2. You can either
+ 2. Unit Tests should not require any further installations
+
+ 3. To set up for Playright, ensure that Powershell is installed (if you are using Windows)
+    To do so, run the following, which will display available versions:
+    $ winget search Microsoft.PowerShell
+
+    Determine an id (typically not Preview) and run
+    winget install --id Microsoft.PowerShell --source winget
+    
+ 5. The project requires that Playright be installed by running from the terminal:
+    $ dotnet add package Microsoft.Playwright.NUnit
+    $ pwsh bin/Debug/net6.0/playwright.ps1 install
+    ^^ The above must be net6.0 for this solution.
+
 ## Executing the Web Application
 ```bash
 $ dotnet run
