@@ -142,8 +142,6 @@ namespace StatisticsCalculator.Controllers
                     yValues.Add(y);
                 }
             }
-            Console.WriteLine(xValues[1]);
-            Console.WriteLine(yValues[1]);
             return (xValues, yValues);
         }
 
