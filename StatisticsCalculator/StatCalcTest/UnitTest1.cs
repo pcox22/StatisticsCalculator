@@ -10,7 +10,12 @@ public class Tests
     [Test]
     public void DifferenceTest()
     {
-        Assert.That(LogicModule.Statistics.Difference(7, 2.5), Is.EqualTo(4.5d));
+        const double a = 7;
+        const double b = 2.5;
+        const double expected = 4.25d;
+
+        var result = LogicModule.Statistics.Difference(a, b);
+        Assert.Equals(expected, result);
     }
 
     [Test]
