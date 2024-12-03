@@ -1,7 +1,7 @@
 # StatisticsCalculator
 
 # KSU SWE 3643 Software Testing and Quality Assurance Semester Project: Web-Based Calculator
-This aim of this project is to create an online calculator which allows users to calculate basic statistical values
+The aim of this project is to create an online calculator which allows users to calculate basic statistical values. Furthermore, the project demonstrates the fundamentals of End-to-End testing and Unit Tests to achieve complete coverage of logical operations within the program.
 
 ## Table of Contents
 - [Introduction](#ksu-swe-3643-software-testing-and-quality-assurance-semester-project-web-based-calculator)
@@ -48,20 +48,35 @@ Passed!  - Failed:     0, Passed:   132, Skipped:     0, Total:   132, Duration:
 ## Reviewing Unit Test Coverage
 ## Executing End-To-End Tests
 ```bash
+Navigate to the PlaywrightUITest directory and open UnitTests.cs
+
+Inside, there are several test cases. Line 9 contains the class definition, and the play all button. Clicking the play button will allow for executing all test cases sequentially. Otherwise, a test can be individually run by finding its definition and clicking the play button.
+
 # From /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests
 
 ❯ dotnet test
   Determining projects to restore...
-  All projects are up-to-date for restore.
-  CalculatorEndToEndTests -> /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests/bin/Debug/net8.0/CalculatorEndToEndTests.dll
-Test run for /Users/jeff/projects/swe-3643-spring-2024-project/src/Calculator/CalculatorEndToEndTests/bin/Debug/net8.0/CalculatorEndToEndTests.dll (.NETCoreApp,Version=v8.0)
+  Restored C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\LogicModule\LogicModule.csproj (in 
+  345 ms).
+  Restored C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\PlaywrightUITest\PlaywrightUITest.c
+  sproj (in 408 ms).
+  Restored C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator.csproj (in 408 
+   ms).
+  Restored C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\StatCalcTest\StatCalcTest.csproj (i 
+  n 422 ms).
+  LogicModule -> C:\Users\10jon\OneDrive\Desktop\CS Labs & Assignments\Software QA\Hw2\StatisticsCalculator\StatisticsCalculator\StatisticsCalculator\LogicModule\bin\Debug\net7.0\
+  LogicModule.dll
+
 Microsoft (R) Test Execution Command Line Tool Version 17.8.0 (arm64)
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
 
-Passed!  - Failed:     0, Passed:     1, Skipped:     0, Total:     1, Duration: 2 s - CalculatorEndToEndTests.dll (net8.0)
+Passed!  - Failed:     0, Passed:     9, Skipped:     0, Total:     9, Duration: 59 ms - StatCalcTest.dll (net7.0)
+
+Passed!  - Failed:     0, Passed:     8, Skipped:     0, Total:     8, Duration: 2 s - PlaywrightUITest.dll (net8.0)
 ```
+
 # Final Video Presentation
 link will be here
